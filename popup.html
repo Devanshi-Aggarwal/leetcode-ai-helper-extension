@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Helper</title>
+
+  <style>
+    body {
+      width: 260px;
+      font-family: Arial;
+      padding: 10px;
+      box-sizing: border-box; /* 🔥 consistency */
+    }
+
+    button {
+      width: 100%;
+      padding: 8px;
+      margin-top: 10px;
+      cursor: pointer;
+      border: none;
+      border-radius: 6px;
+      background-color: #4CAF50;
+      color: white;
+      font-weight: 500;
+      box-sizing: border-box; /* 🔥 important */
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px; /* match button height better */
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      box-sizing: border-box; /* 🔥 FIX ALIGNMENT ISSUE */
+      font-size: 14px;
+    }
+
+    #problemTitle {
+      font-weight: bold;
+    }
+
+    #hintText {
+      margin-top: 5px;
+      color: #333;
+      white-space: pre-line;
+    }
+
+    #chatResponse {
+      margin-top: 8px;
+      color: #222;
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    hr {
+      margin: 12px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>LeetCode Helper</h2>
+
+  <!-- Problem -->
+  <p><strong>Problem:</strong></p>
+  <p id="problemTitle">Loading...</p>
+
+  <!-- Hint Section -->
+  <p><strong>Hint:</strong></p>
+  <p id="hintText">Click button to get hint</p>
+
+  <!-- Buttons -->
+  <button id="getTitle">Get Hint</button>
+  <button id="nextHint" disabled>Next Hint</button>
+  <button id="showAllHints" style="display:none;">Show All Hints</button>
+
+  <!-- Chat Section -->
+  <hr>
+
+  <p><strong>Ask a Question:</strong></p>
+
+  <input 
+    type="text" 
+    id="userQuestion" 
+    placeholder="Ask something..."
+  />
+
+  <button id="askBtn">Ask</button>
+
+  <p id="chatResponse"></p>
+
+  <script src="popup.js"></script>
+</body>
+</html>
