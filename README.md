@@ -14,7 +14,7 @@ An AI-powered Chrome extension that provides progressive hints and interactive g
 ## 📸 Demo
 
 ### 🔹 Extension on Launch (Problem Loaded Automatically)
-Shows how the extension looks when opened — the problem title is detected instantly from LeetCode.
+Shows how the extension looks when opened the problem title is detected instantly from LeetCode.
 
 ![Extension Initial View](demo.png)
 
