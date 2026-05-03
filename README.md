@@ -15,12 +15,12 @@ An AI-powered Chrome extension that provides progressive hints and interactive g
 ### 🔹 Extension on Launch (Problem Loaded Automatically)
 Shows how the extension looks when opened — the problem title is detected instantly from LeetCode.
 
-![Extension Initial View](assets/demo.png)
+![Extension Initial View](demo.png)
 
 ### 🔹 Hint + Chat in Action
 Displays the extension after generating hints and asking a question using the chat feature.
 
-![Hint and Chat View](assets/demo1.png)
+![Hint and Chat View](demo1.png)
 
 ## 🧠 Tech Stack
 
