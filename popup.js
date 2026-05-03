@@ -10,7 +10,7 @@ const nextHintBtn = document.getElementById("nextHint");
 const showAllBtn = document.getElementById("showAllHints");
 const askBtn = document.getElementById("askBtn");
 
-// 🔥 AUTO LOAD TITLE WHEN POPUP OPENS
+// AUTO LOAD TITLE WHEN POPUP OPENS
 document.addEventListener("DOMContentLoaded", async () => {
   let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
 
@@ -51,7 +51,7 @@ getHintBtn.addEventListener("click", async () => {
   showAllBtn.style.display = "none";
 });
 
-// 🔹 NEXT HINT
+// NEXT HINT
 nextHintBtn.addEventListener("click", async () => {
   if (!currentTitle) return;
 
@@ -76,7 +76,7 @@ nextHintBtn.addEventListener("click", async () => {
   document.getElementById("hintText").innerText = formatted;
 });
 
-// 🔹 SHOW ALL HINTS
+// SHOW ALL HINTS
 showAllBtn.addEventListener("click", () => {
   if (allHints.length === 0) return;
 
@@ -84,7 +84,7 @@ showAllBtn.addEventListener("click", () => {
     allHints.join("\n\n");
 });
 
-// 🔹 CHAT FEATURE (independent)
+// CHAT FEATURE (independent)
 askBtn.addEventListener("click", async () => {
   let question = document.getElementById("userQuestion").value;
 
@@ -118,7 +118,7 @@ askBtn.addEventListener("click", async () => {
   );
 });
 
-// 🔹 Extract title
+// Extract title
 function getTitleFromPage() {
   let selectors = [
     'div[data-cy="question-title"]',
@@ -134,7 +134,7 @@ function getTitleFromPage() {
   return null;
 }
 
-// 🔥 HINT AI
+// HINT AI
 async function getHintFromAI(title, level) {
   try {
     let response = await fetch(
@@ -187,7 +187,7 @@ Rules:
   }
 }
 
-// 🔥 CHAT AI
+// CHAT AI
 async function askAI(title, question) {
   try {
     let response = await fetch(
